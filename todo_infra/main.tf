@@ -3,6 +3,7 @@ module "resource_group" {
   resource_group_name = "vikks1"
   location            = "centralindia"
 }
+
 module "virtual_network" {
   depends_on               = [module.resource_group]
   source                   = "../module/virtual_network"
